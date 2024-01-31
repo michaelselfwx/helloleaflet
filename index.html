@@ -40,8 +40,15 @@
             attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
         }).addTo(map);
 
-        var marker1 = L.marker([29.6492181, -82.3440151]).addTo(map);
+        var polygon1 = L.polygon([
+            [29.648712,-82.347533],
+            [29.648712,-82.350027],
+            [29.651206,-82.350027],
+            [29.651206,-82.347533]
+        ]).addTo(map);
+
         var marker2 = L.marker([29.610620, -82.365982]).addTo(map);
+
         var circle1 = L.circle([29.6909, -82.2755], {
             color: 'red',
             fillColor: '#f03',
@@ -49,7 +56,7 @@
             radius: 2000
         }).addTo(map);
 
-        marker1.bindPopup("Turlington Hall").addTo(map);
+        polygon1.bindPopup("Ben Hill Griffin Stadium at Florida-Spurrier Field").addTo(map);
         marker2.bindPopup("My Apartment").addTo(map);
         circle1.bindPopup("GNV");addTo(map);
         
